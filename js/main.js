@@ -71,9 +71,11 @@ function renderTimeline() {
     timelineItem.style.transitionDelay = `${index * 0.1}s`;
     
     timelineItem.innerHTML = `
-      <div class="timeline-dot ${item.type === 'kritis' ? 'critical' : ''}"></div>
-      <div class="timeline-content">
+      <div class="timeline-meta">
+        <div class="timeline-dot ${item.type === 'kritis' ? 'critical' : ''}"></div>
         <span class="timeline-date">${item.date}</span>
+      </div>
+      <div class="timeline-content">
         <h3 class="timeline-title">${item.title}</h3>
         <p class="timeline-desc">${item.desc}</p>
       </div>
